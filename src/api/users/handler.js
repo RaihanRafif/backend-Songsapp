@@ -31,7 +31,6 @@ class UsersHandler {
       response.code(201);
       return response;
     } catch (error) {
-      console.log(error);
       if (error instanceof ClientError) {
         const response = h.response({
           status: 'fail',
@@ -47,7 +46,6 @@ class UsersHandler {
         message: 'Maaf, terjadi kegagalan pada server kami.',
       });
       response.code(500);
-      console.error(error);
       return response;
     }
   }
@@ -80,7 +78,6 @@ class UsersHandler {
         message: 'Maaf, terjadi kegagalan pada server kami.',
       });
       response.code(500);
-      console.error(error);
       return response;
     }
   }
